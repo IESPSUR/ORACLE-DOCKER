@@ -1,0 +1,18 @@
+db:
+        image: oracle-xe
+        restart: always
+        mem_limit: 2g
+        shm_size: 2g
+        environment:
+                #El siguiente SID no se puede cambiar
+                ORACLE_SID: XE 
+                ORACLE_PDB: ORCLPDB1
+                ORACLE_PWD: programaciondaw
+        ports:
+                - "1521:1521"
+                - "5500:5500"
+                  #        volumes:
+                #- "./.docker/mysql/conf.d:/etc/mysql/conf.d"
+                #Directorio Scripts de inicializacion
+                #- "./.docker/initbd:/docker-entrypoint-initdb.d/setup"
+

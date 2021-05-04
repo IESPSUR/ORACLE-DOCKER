@@ -14,6 +14,8 @@ Consultar si ha arrancado
 docker-compose logs
 
 Esperar al mensaje  
-` #########################  
+#  #########################  
  DATABASE IS READY TO USE!  
- #########################`
+ #########################
+
+asdfsadf

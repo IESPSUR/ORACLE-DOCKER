@@ -1,14 +1,13 @@
 db:
-        image: oracle-database:11.2.0-XE
+        image: oracle-database:19.3.0-SE
         restart: always
-        mem_limit: 2g
-        shm_size: 1g
         environment:
-                #El SID es 'XE' y no se puede cambiar
+                ORACLE_SID: ORCLCDB
+                ORACLE_PDB: ORCLPDB1
                 ORACLE_PWD: programaciondaw
         ports:
                 - "1521:1521"
-                - "8080:8080"
+                - "5500:5500"
                   #        volumes:
                 #- "./.docker/mysql/conf.d:/etc/mysql/conf.d"
                 #Directorio Scripts de inicializacion
